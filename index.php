@@ -37,7 +37,11 @@ if (!isset($_SESSION['pengguna_type'])) {
           <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
+<<<<<<< HEAD
           <marquee style="color: white; font-size: 20px;">Sistem Surat Tugas</marquee>
+=======
+          <marquee style="color: white; font-size: 20px;">Sistem Informasi Surat Masuk & Surat Keluar</marquee>
+>>>>>>> ea5e0cabedd1594caf637df5f4fd7094bc89f2c0
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
@@ -84,11 +88,19 @@ if (!isset($_SESSION['pengguna_type'])) {
                   <div class="row align-items-center">
                     <div class="col mr-2">
                       <?php 
+<<<<<<< HEAD
                       $sm = mysqli_query($koneksi, "SELECT count(*) as jumlah_surat_tugas FROM surat_tugas");
                       $rsm = mysqli_fetch_assoc($sm);
                       ?>
                       <div class="text-xs font-weight-bold text-uppercase mb-1">Surat Tugas</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $rsm['jumlah_surat_tugas']; ?></div>
+=======
+                      $sm = mysqli_query($koneksi, "SELECT count(*) as jumlah_sm FROM tb_sm");
+                      $rsm = mysqli_fetch_assoc($sm);
+                      ?>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Surat Tugas</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $rsm['jumlah_sm']; ?></div>
+>>>>>>> ea5e0cabedd1594caf637df5f4fd7094bc89f2c0
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-envelope fa-2x text-primary"></i>

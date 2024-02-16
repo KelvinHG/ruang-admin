@@ -36,6 +36,11 @@ if ($koneksi->query($query) === TRUE) {
         if ($ukuran_file <= 50000000) {
             $target_dir = "suratmasuk/";
             $target_file = $target_dir . basename($nama_file);
+<<<<<<< HEAD
+=======
+
+            if (move_uploaded_file($file_surat_tmp[$index], $target_file)) {
+>>>>>>> ea5e0cabedd1594caf637df5f4fd7094bc89f2c0
                 // Simpan informasi file ke database
                 $query = "INSERT INTO file_surat (surat_id, nama_file) VALUES ($surat_id, '$nama_file')";
                 $koneksi->query($query);
@@ -49,7 +54,11 @@ if ($koneksi->query($query) === TRUE) {
               alert("Ukuran file terlalu besar.!");</script>';
             echo "<meta http-equiv='refresh' content='0; url=surat_masuk.php'>";
         }
+<<<<<<< HEAD
     
+=======
+    }
+>>>>>>> ea5e0cabedd1594caf637df5f4fd7094bc89f2c0
 
     echo '<script language="javascript" type="text/javascript">
         alert("Data Berhasil Diupdate!");</script>';
